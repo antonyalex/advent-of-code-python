@@ -1,15 +1,17 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-import markdoc from '@astrojs/markdoc';
+import markdoc from '@astrojs/markdoc'; 
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://threadsnappers.github.io',
   base: '/advent-of-code-python/',
   integrations: [
+    
     markdoc(),
     starlight({
       title: 'Threadsnappers',
+      customCss: ['/src/assets/theme.css'], 
       editLink: {
         baseUrl: 'https://github.com/Threadsnappers/advent-of-code-python/edit/main/',
       },
